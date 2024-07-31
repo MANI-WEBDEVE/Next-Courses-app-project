@@ -1,0 +1,104 @@
+{
+    "courses": [
+        {
+            "id": 1,
+            "title": "Introduction to HTML",
+            "slug": "introduction-to-html",
+            "description": "Learn the basics of HTML to start building web pages from scratch.",
+            "price": 49.99,
+            "instructor": "Alice Green",
+            "isFeatured": true,
+            "image": "/courses/html.jpg"
+        },
+        {
+            "id": 2,
+            "title": "CSS for Beginners",
+            "slug": "css-for-beginners",
+            "description": "Master the fundamentals of CSS and style your web pages with ease.",
+            "price": 59.99,
+            "instructor": "Bob White",
+            "isFeatured": false,
+            "image": "/courses/css.jpg"
+        },
+        {
+            "id": 3,
+            "title": "JavaScript Essentials",
+            "slug": "javascript-essentials",
+            "description": "Get a solid foundation in JavaScript, the programming language of the web.",
+            "price": 69.99,
+            "instructor": "Carol Black",
+            "isFeatured": true,
+            "image": "/courses/javascript.jpg"
+        },
+        {
+            "id": 4,
+            "title": "React Basics",
+            "slug": "react-basics",
+            "description": "Learn the basics of React and start building dynamic web applications.",
+            "price": 79.99,
+            "instructor": "Dave Blue",
+            "isFeatured": false,
+            "image": "/courses/react.jpg"
+        },
+        {
+            "id": 5,
+            "title": "Advanced React Techniques",
+            "slug": "advanced-react-techniques",
+            "description": "Enhance your React skills with advanced techniques and best practices.",
+            "price": 89.99,
+            "instructor": "Eve Pink",
+            "isFeatured": true,
+            "image": "/courses/advanced-react.jpg"
+        },
+        {
+            "id": 6,
+            "title": "Node.js Fundamentals",
+            "slug": "nodejs-fundamentals",
+            "description": "Learn the basics of Node.js to build scalable server-side applications.",
+            "price": 99.99,
+            "instructor": "Frank Yellow",
+            "isFeatured": false,
+            "image": "/courses/nodejs.jpg"
+        },
+        {
+            "id": 7,
+            "title": "Full-Stack Web Development",
+            "slug": "full-stack-web-development",
+            "description": "Become a full-stack web developer by learning both front-end and back-end technologies.",
+            "price": 199.99,
+            "instructor": "Grace Brown",
+            "isFeatured": true,
+            "image": "/courses/full-stack.jpg"
+        },
+        {
+            "id": 8,
+            "title": "Web Design Principles",
+            "slug": "web-design-principles",
+            "description": "Learn the principles of web design to create aesthetically pleasing and user-friendly websites.",
+            "price": 89.99,
+            "instructor": "Henry Grey",
+            "isFeatured": false,
+            "image": "/courses/web-design.jpg"
+        },
+        {
+            "id": 9,
+            "title": "Introduction to TypeScript",
+            "slug": "introduction-to-typescript",
+            "description": "Get started with TypeScript and improve your JavaScript code quality.",
+            "price": 79.99,
+            "instructor": "Ivy Purple",
+            "isFeatured": true,
+            "image": "/courses/typescript.jpg"
+        },
+        {
+            "id": 10,
+            "title": "Building APIs with Express.js",
+            "slug": "building-apis-with-express",
+            "description": "Learn to build robust APIs using Express.js, the popular Node.js framework.",
+            "price": 99.99,
+            "instructor": "Jack Red",
+            "isFeatured": false,
+            "image": "/courses/express.jpg"
+        }
+    ]
+}
