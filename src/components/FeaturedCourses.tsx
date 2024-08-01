@@ -2,6 +2,7 @@
 import apiData from "@/data/course-data.json";
 import { ButtonsCard } from "./ui/tailwindcss-buttons";
 import Link from "next/link";
+import { BackgroundGradient } from "./ui/background-gradient";
 
 const FeaturedCourses = () => {
     interface Course {
@@ -14,29 +15,8 @@ const FeaturedCourses = () => {
         isFeatured: boolean;
         image: string;
     }
-
-    const apiData1:Course[] = [
-        {
-            "id": 1,
-            "title": "Introduction to HTML",
-            "slug": "introduction-to-html",
-            "description": "Learn the basics of HTML to start building web pages from scratch.",
-            "price": 49.99,
-            "instructor": "Alice Green",
-            "isFeatured": true,
-            "image": "/courses/html.jpg"
-        },
-        {
-            "id": 2,
-            "title": "CSS for Beginners",
-            "slug": "css-for-beginners",
-            "description": "Master the fundamentals of CSS and style your web pages with ease.",
-            "price": 59.99,
-            "instructor": "Bob White",
-            "isFeatured": false,
-            "image": "/courses/css.jpg"
-        },  
-    ]
+    const unique:number = Math.floor(Math.random() * 100)
+    const courseData = apiData.courses.filter((course:Course) => course.isFeatured)
     
   return (
     <>
@@ -54,29 +34,34 @@ const FeaturedCourses = () => {
             </span>
           </div>
         </div>
-        <div className="mt-10 flex items-center justify-center w-[100%]">
-            <div className="p-3">
-
-        <ul className="list-none flex items-center justify-center flex-row flex-wrap p-3">
-            {
-                apiData1.map((curElem: Course) => {
-                    
-                    return <>
-                        <li key={curElem.id} className="p-4 w-[30%]">
-                            <h1>{curElem.title}</h1>
-                            <p>{curElem.description}</p>
-                            <p>{curElem.instructor}</p>
+        <div className="mt-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+              {
+                courseData.map((curElem:Course) =>  {
+                  const {id, title, description, price, image,instructor} = curElem
+                  return (
+                    <>
+                    <ul key={curElem.id} className="flex justify-center">
+                      <BackgroundGradient className="rounded-[22px] max-w-sm p-6 sm:p-8 overflow-hidden h-[100%] bg-white dark:bg-zinc-900" >
+                        <li key={id}>
+                          <h1 className="text-xl font-medium
+                          mb-4">{title}</h1>
+                          <p className="text-[15px] mb-4">{description}</p>
+                          <p className="text-[14px] font-thin ">Instructor: {instructor}</p>
+                          <p className="mt-4" >Price: {price} $</p>
                         </li>
+                      </BackgroundGradient>
+                    </ul>
                     </>
+                  )
                 })
-            }
-        </ul>
-                    </div>
+              }
+            </div>
         </div>
         <div className="flex justify-center items-center">
           <div className=" flex justify-center items-center">
             <Link href={'#'}>
-              <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-full border border-cyan-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+              <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-full border border-cyan-800 bg-[linear-gradient(110deg,#000106,45%,#4ec7e1,50%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-0 focus:ring-slate-400 focus:ring-offset-0 focus:ring-offset-slate-50">
                 Explore Cources
               </button>
             </Link>
